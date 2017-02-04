@@ -12,7 +12,6 @@ public class leftFlipper : MonoBehaviour
 	{
 		hinge = gameObject.GetComponent<HingeJoint2D> ();
 		flipper = gameObject.GetComponent<Rigidbody2D>();
-		Debug.Log ("hi");
 	}
 
 	void update()
