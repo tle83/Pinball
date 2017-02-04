@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rightFlipper : MonoBehaviour 
+public class leftFlipper : MonoBehaviour 
 {
 	HingeJoint2D hinge;
 	public float force = 100f;
@@ -17,7 +17,7 @@ public class rightFlipper : MonoBehaviour
 
 	void update()
 	{
-		if (Input.GetKeyDown (KeyCode.RightArrow)) 
+		if (Input.GetKeyDown (KeyCode.LeftArrow)) 
 		{
 			hinge.useMotor = true;
 			flipper.AddTorque (force);
