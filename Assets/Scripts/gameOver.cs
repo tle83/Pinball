@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class gameOver : MonoBehaviour 
 {
@@ -12,9 +13,16 @@ public class gameOver : MonoBehaviour
 		text.color = Color.white;
 	}
 
+	void Update()
+	{
+		if (Input.GetKeyDown (KeyCode.Space)) {
+			SceneManager.LoadScene ("Pinball Game");
+		}
+	}
+
+
 	void OnTriggerEnter2D(Collider2D col)
 	{
-		UnityEngine.Debug.Log ("Game Over");
 		text.text = "Game Over";
 	}
 }

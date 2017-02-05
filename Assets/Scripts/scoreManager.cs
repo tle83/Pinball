@@ -19,7 +19,6 @@ public class scoreManager : MonoBehaviour
 		if(col.gameObject.CompareTag("Pins"))
 		{
 			count += 10;
-			UnityEngine.Debug.Log ("Score: " + count);
 			SetCountText ();
 		}
 	}
