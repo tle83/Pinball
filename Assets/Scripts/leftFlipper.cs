@@ -2,24 +2,22 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class leftFlipper : MonoBehaviour 
+public class LeftFlipper : MonoBehaviour 
 {
 	HingeJoint2D hinge;
-	public float force = 100f;
-	Rigidbody2D flipper;
+	JointMotor2D jointMotor;
 
-	void start()
+	void Start()
 	{
 		hinge = gameObject.GetComponent<HingeJoint2D> ();
-		flipper = gameObject.GetComponent<Rigidbody2D>();
+		jointMotor = hinge.motor;
 	}
 
-	void update()
+	void Update()
 	{
-		if (Input.GetKeyDown (KeyCode.LeftArrow)) 
-		{
-			hinge.useMotor = true;
-			flipper.AddTorque (force);
-		}
+		if (Input.GetKeyDown (KeyCode.LeftArrow)) {
+			jointMotor.motorSpeed = 700;
+			hinge.motor = jointMotor;
+		} 
 	}
 }

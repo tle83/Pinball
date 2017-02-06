@@ -21,8 +21,5 @@ public class launcher : MonoBehaviour
 			currentPos.y = inititalPos.y + .2f;
 			rigidBody.MovePosition (currentPos);
 		}
-		if (currentPos.y == inititalPos.y + .2f) {
-			rigidBody.MovePosition (inititalPos);
-		}
 	}
 }
