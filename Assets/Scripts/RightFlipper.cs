@@ -17,9 +17,10 @@ public class RightFlipper : MonoBehaviour
 	{
 		if (Input.GetKey (KeyCode.RightArrow)) {
 			jointMotor.motorSpeed = -700;
-			hinge.motor = jointMotor;
 		} else {
 			jointMotor.motorSpeed = 700;
 		}
+		hinge.motor = jointMotor;
+
 	}
 }
